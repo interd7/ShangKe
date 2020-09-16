@@ -101,8 +101,99 @@ bool类型
 # print(str1[1:10:2])
 # print(str1[-7:-1:1])
 
-for i in range(101):
-    print('{}%'.format(i)+'['+'*'* i +'->'+ '·' * (100-i)+']')
-    time.sleep(1)
-print('下载完成！')
+# for i in range(101):
+#     print('{}%'.format(i)+'['+'*'* i +'->'+ '·' * (100-i)+']')
+#     time.sleep(0.5)
+# print('下载完成！')
 
+# a = 2
+# b = 3
+# print(a >= 0)
+# print(a != 0)
+# print(a >= 0 and a <= 100)
+# print(not a)
+# i = 153
+# k1 = i % 10
+# print(k1)
+# k2 = i//10 % 10
+# k3 = i//100 % 10
+# print(k2)
+# print(k3)
+# for i in range(100,1000):
+#     k1 = i % 10
+#     k2 = i // 10 % 10
+#     k3 = i // 100
+#     if (k1**3 + k2**3 + k3**3) == i:
+#         print(i)
+
+# first_number = input('请输入第一个数')
+# second_number = input('请输入第二个数')
+# third_number = input('请输入第三个数')
+# if first_number>second_number:
+#     max_number = first_number
+# else: max_number = second_number
+# if first_number>third_number:
+#     max_number = first_number
+# else:max_number = third_number
+# if second_number>third_number:
+#     max_number = second_number
+# else:max_number = third_number
+# print(max_number)
+# x=10
+# y=20
+# z=30
+# z = x
+# x = y
+# y = z
+# print(x, y, z)
+# shengao = float(input('请输入您的身高（单位为米）：'))
+# tizhong = float(input('请输入您的体重（单位为千克）：'))
+# BMI = tizhong / ( shengao ** 2)
+# print('您的BMI指数为：{:.2f}'.format(BMI))
+# if BMI>=30.0:
+#     print('您肥胖')
+# elif BMI>=25:
+#     print('您超重')
+# elif BMI>=18.5:
+#     print('您正常')
+# else:
+#     print('您偏瘦')
+
+# sheshidu = float(input('请输入摄氏温度：'))
+# huashidu = sheshidu*1.8 + 32
+# jueduiwendu = sheshidu + 273.15
+# lanshidu = sheshidu*1.8+32+459.67
+# lieshidu = sheshidu*0.8
+# print('{}摄氏温度转为华氏温度为{},绝对温度为{},兰氏度为{:.2f},列氏度为{}'
+#       .format(sheshidu,huashidu,jueduiwendu,lanshidu,lieshidu))
+# import random
+# count = 0
+# random_num = random.randint(1, 100)
+# while count<5:
+#     num = int(input("请猜一个1到100之间的数字："))
+#     if num>random_num:
+#         print('很遗憾，猜大了')
+#     elif num<random_num:
+#         print('很遗憾，猜小了')
+#     else:
+#         print('恭喜你猜对了！')
+#         exit()
+#     count = count+1
+# print('您猜了{}次都没有猜中，再试一次吧！'.format(count))
+
+ipaddr = input('请输入IPv4地址：')
+addr = ipaddr.strip().split('.')
+if len(addr)==4:
+    try:
+        for i in range(4):
+            addr[i] = int(addr[i])
+    except:
+        print('IPv4地址不合法，请输入数字，以"."分割。')
+        exit()
+    if addr[0] > 255 or addr[0] < 0 or addr[1] > 255 or addr[1] < 0 \
+            or addr[2] > 255 or addr[2] < 0 or addr[3] > 255 or addr[3] < 0:
+        print('IPv4地址不合法，请输入0～255之间的数字。')
+    else:
+        print('您输入的是合法IPv4地址。')
+else:
+    print('请输入4段地址。')
