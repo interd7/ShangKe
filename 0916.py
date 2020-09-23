@@ -146,18 +146,18 @@ bool类型
 # x = y
 # y = z
 # print(x, y, z)
-# shengao = float(input('请输入您的身高（单位为米）：'))
-# tizhong = float(input('请输入您的体重（单位为千克）：'))
-# BMI = tizhong / ( shengao ** 2)
-# print('您的BMI指数为：{:.2f}'.format(BMI))
-# if BMI>=30.0:
-#     print('您肥胖')
-# elif BMI>=25:
-#     print('您超重')
-# elif BMI>=18.5:
-#     print('您正常')
-# else:
-#     print('您偏瘦')
+shengao = float(input('请输入您的身高（单位为米）：'))
+tizhong = float(input('请输入您的体重（单位为千克）：'))
+BMI = tizhong / ( shengao ** 2)
+print('您的BMI指数为：{:.2f}'.format(BMI))
+if BMI>=30.0:
+    print('您肥胖')
+elif BMI>=25:
+    print('您超重')
+elif BMI>=18.5:
+    print('您正常')
+else:
+    print('您偏瘦')
 
 # sheshidu = float(input('请输入摄氏温度：'))
 # huashidu = sheshidu*1.8 + 32
