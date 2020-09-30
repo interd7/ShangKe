@@ -17,9 +17,15 @@ t2 = {1, 2, 3, 4, 5}
 list3 = list('1222333')# 一个参数，或一个可迭代类型的数据（字符串，列表，元祖，字典，集合）
 # print(list2)
 # 字符串
-s1 = "hello world!"
-for s in s1:
-    print(s)
-# 遍历列表
-for i in list3:
-    print(i,end='\t')
+# s1 = "hello world!"
+# for s in s1:
+#     print(s)
+# # 遍历列表
+# for i in list3:
+#     print(i,end='\t')
+# list4 = ["Java","C#","C","C++",["Python","VB"]]
+# print(list4[-1][1])
+# print(list4[:])
+# print(list4[:3])
+# print(list4[3:])
+# print(list4[::-1])
