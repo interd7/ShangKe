@@ -97,19 +97,44 @@
 import cv2
 import time
 import random
-inx = input('按回车开始掷色子!!').strip()
+user1 = input("请输入玩家1姓名：")
+inx = input('请按回车开始掷色子!!').strip()
 for i in range(10):
     cv2.waitKey(1)
-    # 将程序停顿0.5秒  
+    #  将程序停顿0.5秒  
     time.sleep(0.5)
-    # 产生[1,6]之间的随机数  
+    #  产生[1,6]之间的随机数  
     j = random.randint(1, 6)
     imgj = str(j) + 'a.png'
-    # 读取图片  
+    #  读取图片  
     img = cv2.imread(imgj)
-    # 显示图片  
+    #  显示图片  
     cv2.imshow("img", img)
 
-print('您投中了{}点！'.format(j))
+print('{},您投中了{}点！'.format(user1, j))
+
+user2 = input("请输入玩家2姓名：")
+inx = input('请按回车开始掷色子!!').strip()
+for i in range(10):
+    cv2.waitKey(1)
+    #  将程序停顿0.5秒  
+    time.sleep(0.5)
+    #  产生[1,6]之间的随机数  
+    k = random.randint(1, 6)
+    imgj = str(k) + 'a.png'
+    #  读取图片  
+    img = cv2.imread(imgj)
+    #  显示图片  
+    cv2.imshow("img", img)
+
+print('{},您投中了{}点！'.format(user2, k))
+if j > k:
+    print("{}赢了".format(user1))
+elif k > j:
+    print("{}赢了".format(user2))
+else:
+    print("平局了！再试一次吧！")
+
+
 # 关闭窗口  
 # cv2.destroyAllWindow() 
