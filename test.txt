@@ -1,3 +1,0 @@
-我在练习向文件中写入数据:
-********Hello Python!********Hello Java!********
-See you!
