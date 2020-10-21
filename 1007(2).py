@@ -15,7 +15,7 @@ import random
 
 myList = []
 #  1. 读取excel文档
-wb = openpyxl.load_workbook(r'/Users/fushengyuanwuhui/Downloads/计科18级学生名单.xlsx')
+wb = openpyxl.load_workbook(r'/Users/inter.d/Downloads/计科18级学生名单.xlsx')
 #  2. 获取工作表中
 sheet = wb[wb.sheetnames[0]]
 for row in sheet.rows:
