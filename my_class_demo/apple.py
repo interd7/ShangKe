@@ -13,9 +13,11 @@
 
 class Apple:
     count = 10
+
     def show(self):
         print("我是Apple的show方法")
-    def __init__(self,id):
+
+    def __init__(self, id):
         print("我是Apple的构造方法")
     # def f1(self):
     #     self.count = 88
@@ -33,12 +35,15 @@ class Apple:
 
 class Hfsapple(Apple):
     weight = 0.5
-    def __init__(self,id):
+
+    def __init__(self, id):
         super(Hfsapple, self).__init__(id)
         print("我是hfs的构造方法")
+
     def show(self):
         super().show()
-        print(self.weight,Hfsapple.count)
+        print(self.weight, Hfsapple.count)
+
 
 # a = Apple()
 # a.f1()
