@@ -193,5 +193,5 @@ class Atm:
                 ch = chr(random.randrange(ord("0"), ord("9") + 1))
                 str += ch
             # 判断是否重复
-            if not self.all_users.get(str):  # 这里是通过找一下原来的字典中是否有这个key，如果没有的话那么这个卡号就合法，前面要有个not，没有找到这个卡号那么我们创建这个卡号
+            if not self.all_users.get(str):                             # 这里是通过找一下原来的字典中是否有这个key，如果没有的话那么这个卡号就合法，前面要有个not，没有找到这个卡号那么我们创建这个卡号
                 return str
