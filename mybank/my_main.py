@@ -51,6 +51,7 @@ class HomePage:
                     self.atm.unlock_card()
                 elif option == "q":
                     print("退出")
+                    exit()
 
 
 if __name__ == "__main__":
