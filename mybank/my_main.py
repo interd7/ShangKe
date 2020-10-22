@@ -20,9 +20,9 @@ class HomePage:
         self.atm = Atm(self.all_user_id)
         self.admin = Admin()
 
-    def save_user(self):
-        self.all_user_id.update(self.atm.all_users)
-        print("数据存盘成功")
+    # def save_user(self):
+    #     self.all_user_id.update(self.atm.all_users)
+    #     print("数据存盘成功")
 
     def main(self):
         self.admin.print_admin_view()
@@ -49,7 +49,7 @@ class HomePage:
                     self.atm.lock_card()
                 elif option == "7":
                     self.atm.unlock_card()
-                elif option == "q":
+                elif option == "q" or "Q":
                     print("退出")
                     exit()
 
