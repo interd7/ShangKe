@@ -16,6 +16,15 @@ url1 = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594
 headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}
 
 # 2.发起请求：
-response = requests.get(url=url1,headers=headers).content
-with open('houzi.png','wb')as fp:
+# response = requests.get(url=url1,headers=headers).content
+# with open('houzi.png','wb')as fp:
+#     fp.write(response)
+# 兔宝宝现金流量
+url2 = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_CashFlow/displaytype/4/stockid/002043/ctrl/all.phtml'
+# 兔宝宝利润
+url3 = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_ProfitStatement/displaytype/4/stockid/002043/ctrl/all.phtml'
+# 兔宝宝资产负债
+url4 = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_BalanceSheet/displaytype/4/stockid/002043/ctrl/all.phtml'
+response = requests.get(url = url4,headers=headers).content
+with open('TbbZcfz.xls','wb')as fp:
     fp.write(response)
