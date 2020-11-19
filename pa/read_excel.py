@@ -17,6 +17,9 @@ from pandas.tests.io.excel.test_xlrd import xlrd
 
 df=pd.DataFrame(pd.read_excel('/Users/inter.d/PycharmProjects/ShangKe/pa/TbbZcfz.xls',header=1))
 print(df.iloc[0:11, 0:32])
+# df = df.iloc[1:,0:]
+# df = df.set_index('id')
+# df.to_excel('/Users/inter.d/PycharmProjects/ShangKe/pa/TbbZcfz1.xls', sheet_name='mySheet')
 # conn=pymysql.connect(host='localhost',user='root',password='root1234',
 #                      db='grss',charset='utf8')
 # cousor=conn.cursr()
