@@ -25,6 +25,6 @@ url2 = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_CashFlow/displaytype/
 url3 = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_ProfitStatement/displaytype/4/stockid/002043/ctrl/all.phtml'
 # 兔宝宝资产负债
 url4 = 'http://money.finance.sina.com.cn/corp/go.php/vDOWN_BalanceSheet/displaytype/4/stockid/002043/ctrl/all.phtml'
-response = requests.get(url = url4,headers=headers).content
-with open('TbbZcfz.xls','wb')as fp:
+response = requests.get(url = url3,headers=headers).content
+with open('TbbLrb.xls','wb')as fp:
     fp.write(response)

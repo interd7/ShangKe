@@ -49,6 +49,7 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # 检查数据空值
 # print(df.isnull())
 
+
 # 检查特定列空值
 # print(df['price'].isnull())
 
@@ -61,6 +62,9 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 
 # 查看列名称
 # print(df.columns)
+
+# 删除列
+# df = df.drop('city',1)
 
 # 查看前3行数据
 # print(df.head(3))
