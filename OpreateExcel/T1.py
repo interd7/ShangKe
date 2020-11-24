@@ -18,8 +18,8 @@ import pandas as pd
 
 #  导入数据表
 # df=pd.DataFrame(pd.read_csv('name.csv',header=1))
-# df=pd.DataFrame(pd.read_excel('excel_to_python.xlsx'))
-
+# df=pd.DataFrame(pd.read_excel('./Documents/回答汇总.xlsx'))
+# print(df.values)
 #  创建数据表
 df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
                    "date": pd.date_range('20130102', periods=6),
@@ -27,9 +27,7 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
                    "age": [23, 44, 54, 32, 34, 32],
                    "category": ['100-A', '100-B', '110-A', '110-C', '210-A', '130-F'],
                    "price": [1200, np.nan, 2133, 5433, np.nan, 4432]})
-#
-# df.to_excel('excel_to_python.xlsx',sheet_name='Sheet1')
-# df.to_excel('excel_to_python.csv',sheet_name='Sheet1')
+
 #  数据表检查
 #  数据维度
 # 查看数据表的维度
@@ -102,7 +100,8 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # print(df['age'].astype('float'))
 
 # 更改列名称
-# print(df.rename(columns={'category': 'category-size'}))
+# df = df.rename(columns={'category': 'category-size'})
+# print(df.columns)
 
 # 删除重复值
 # 删除后出现的重复值
@@ -170,7 +169,7 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # print(df.groupby('city')['price'].agg([len, np.sum, np.mean]))
 
 # 输出到excel格式
-# df.to_excel('/Users/inter.d/PycharmProjects/ShangKe/OpreateExcel/excel_to_python.xlsx', sheet_name='mySheet')
+# df.to_excel('./Documents/OpreateExcel.xlsx', sheet_name='mySheet')
 
 # 输出到CSV格式
 # df.to_csv('excel_to_python.csv')
