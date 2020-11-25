@@ -169,7 +169,7 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # print(df.groupby('city')['price'].agg([len, np.sum, np.mean]))
 
 # 输出到excel格式
-# df.to_excel('./Documents/OpreateExcel.xlsx', sheet_name='mySheet')
+# df.to_excel('./Documents/OperateExcel.xlsx', sheet_name='mySheet')
 
 # 输出到CSV格式
-# df.to_csv('excel_to_python.csv')
+# df.to_csv('./Documents/OperateExcel.csv')

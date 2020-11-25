@@ -13,7 +13,7 @@ import pytesseract
 from PIL import Image
 # 直接识别
 
-captcha = Image.open("/Users/inter.d/PycharmProjects/ShangKe/pa/3.png")
+captcha = Image.open("/pa/3.png")
 
 check_code = pytesseract.image_to_string(captcha)
 

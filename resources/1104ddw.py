@@ -25,7 +25,7 @@ from bs4 import BeautifulSoup
 
 def write_item_to_file(item):
     print("开始写入数据===>{}".format(item))
-    with open("dangdang.txt","a",encoding="utf-8") as fp:
+    with open("dangdang.txt", "a", encoding="utf-8") as fp:
         fp.write(json.dumps(item,ensure_ascii=False)+"\n")
         fp.close()
 
