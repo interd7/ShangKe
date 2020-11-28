@@ -12,25 +12,29 @@
 import numpy as np
 import pandas as pd
 
+pd.set_option('display.max_columns', 1000)
+pd.set_option('display.width', 1000)
+pd.set_option('display.max_colwidth', 1000)
 # NumPy是用Python进行科学计算的基础软件包
 # pandas是基于NumPy数组构建的,使数据预处理、清洗、分析工作变得更快更简单,
 # pandas是专门为处理表格和混杂数据设计的
 
-#  导入数据表
-# df=pd.DataFrame(pd.read_csv('name.csv',header=1))
-# df=pd.DataFrame(pd.read_excel('./Documents/回答汇总.xlsx'))
-# print(df.values)
 #  创建数据表
-df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
-                   "date": pd.date_range('20130102', periods=6),
-                   "city": ['Beijing ', 'SH', ' guangzhou ', 'Shenzhen', 'shanghai', 'BEIJING '],
-                   "age": [23, 44, 54, 32, 34, 32],
-                   "category": ['100-A', '100-B', '110-A', '110-C', '210-A', '130-F'],
-                   "price": [1200, np.nan, 2133, 5433, np.nan, 4432]})
+# df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
+#                    "date": pd.date_range('20130102', periods=6),
+#                    "city": ['Beijing ', 'SH', ' guangzhou ', 'Shenzhen', 'shanghai', 'BEIJING '],
+#                    "age": [23, 44, 54, 32, 34, 32],
+#                    "category": ['100-A', '100-B', '110-A', '110-C', '210-A', '130-F'],
+#                    "price": [1200, np.nan, 2133, 5433, np.nan, 4432]})
+#
+# df.to_excel('City_Info.xlsx')
+
+# 读取数据表
+df = pd.DataFrame(pd.read_excel('City_Info.xlsx'))
 
 #  数据表检查
 #  数据维度
-# 查看数据表的维度
+# 查看数据表的维度(几行几列)
 # print(df.shape)
 
 # 数据表信息
@@ -47,7 +51,6 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # 检查数据空值
 # print(df.isnull())
 
-
 # 检查特定列空值
 # print(df['price'].isnull())
 
@@ -62,7 +65,9 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # print(df.columns)
 
 # 删除列
+# print(df.columns)
 # df = df.drop('city',1)
+# print(df.columns)
 
 # 查看前3行数据
 # print(df.head(3))
@@ -103,6 +108,10 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # df = df.rename(columns={'category': 'category-size'})
 # print(df.columns)
 
+# 数据表转置
+# df = df.T
+# print(df.head(3))
+
 # 删除重复值
 # 删除后出现的重复值
 # print(df['city'].drop_duplicates())
@@ -116,16 +125,19 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 
 # 数据处理
 # 设置索引列
+# print(df)
 # df = df.set_index('id')
 # print(df)
-# df.to_excel('/Users/inter.d/PycharmProjects/ShangKe/OpreateExcel/excel_to_python.xlsx', sheet_name='mySheet')
-# print('Done!')
+
 # 排序（按索引，按数值）
 # 按特定列的值排序
-# df.sort_values(by=['age'])
+# df = df.sort_values(by=['age'])
+# print(df)
 
 # 按索引列排序
-# df.sort_index()
+# df = df.set_index('id')
+# df = df.sort_index()
+# print(df)
 
 # 数据提取
 # 按标签提取(loc)
@@ -154,8 +166,10 @@ df = pd.DataFrame({"id": [1001, 1002, 1003, 1004, 1005, 1006],
 # 分类汇总
 # Groupby是进行分类汇总的函数，使用方法很简单，制定要分组的列名称就可以，也可以同时制定多个列名称，
 # groupby按列名称出现的顺序进行分组。同时要制定分组后的汇总方式，常见的是计数和求和两种。
+
 # 对所有列进行计数汇总
-# print(df.groupby('city').count())
+# print(df.groupby('id').count())
+# print(df.groupby('id').sum())
 
 # 对特定的ID列进行计数汇总
 # print(df.groupby('city')['id'].count())
